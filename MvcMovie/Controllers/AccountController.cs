@@ -346,7 +346,7 @@ namespace MvcMovie.Controllers
             var user = await UserManager.FindAsync(loginInfo.Login);
             if (user != null)
             {
-                // await UserManager.AddToRoleAsync(user.Id, "canEdit");
+                await UserManager.AddToRoleAsync(user.Id, "canEdit");
                 await SignInAsync(user, isPersistent: false);
                 return RedirectToLocal(returnUrl);
             }

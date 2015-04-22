@@ -6,6 +6,8 @@ using System.Net;
 using System.Web.Mvc;
 using MvcMovie.Models;
 using PagedList;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace MvcMovie.Controllers
 {
@@ -103,6 +105,7 @@ namespace MvcMovie.Controllers
         }
 
         // GET: Movies/Create
+       // [Authorize(Roles = "canEdit")]
         public ActionResult Create()
         {
             return View();
@@ -113,6 +116,7 @@ namespace MvcMovie.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        //[Authorize(Roles = "canEdit")]
         public ActionResult Create([Bind(Include = "ID,Title,ReleaseDate,Genre,Price,Rating, Seen")] Movie movie)
         {
             if (ModelState.IsValid)
@@ -126,6 +130,7 @@ namespace MvcMovie.Controllers
         }
 
         // GET: Movies/Edit/5
+        //[Authorize(Roles = "canEdit")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
