@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\v11.0;AttachDbFilename=|DataDirectory|\aspnet-MvcMovie-20150421022004.mdf;Initial Catalog=aspnet-MvcMovie-20150421022004;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Steven\\Documents\\Visual\ Studio\ 2013\\Projects\\MvcMovie\\MvcMovie\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="MovieDBContext-Web.config Connection String" description="MovieDBContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Movies.mdf;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Steven\\Documents\\Visual\ Studio\ 2013\\Projects\\MvcMovie\\MvcMovie\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='MovieDBContext']/@connectionString" />
+  </parameter>
+  <parameter name="MovieDBContext_DatabasePublish-Web.config Connection String" description="MovieDBContext_DatabasePublish Connection String used in web.config by the application to access the database." defaultValue="MovieDBContext_DatabasePublish.ConnetionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Steven\\Documents\\Visual\ Studio\ 2013\\Projects\\MvcMovie\\MvcMovie\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='MovieDBContext_DatabasePublish']/@connectionString" />
+  </parameter>
+</parameters>
